@@ -1,12 +1,12 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Home from "./home/Home";
-import Courses from "./courses/Courses";
+import Home from "./Home/Home";
+import Courses from "./Courses/Courses";
 import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
-import About from "./home/About";
-import Contact from "./home/Contact";
+import About from "./Home/About";
+import Contact from "./Home/Contact";
 import Navbar from "./components/Navbar"; 
 import Footer from "./components/Footer"; 
 import BookDetailPage from "./components/BookDetailPage"; 
