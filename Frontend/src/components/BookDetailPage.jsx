@@ -13,7 +13,7 @@ function BookDetailPage() {
         // Fetch book details
         const fetchBookDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:4001/book/${id}`);
+                const response = await axios.get(`https://bookwookweb-backend.onrender.com/book/${id}`);
                 if (response.data) {
                     setBook(response.data);
                 }
