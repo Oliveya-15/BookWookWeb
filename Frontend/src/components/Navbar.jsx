@@ -145,7 +145,7 @@ function Navbar() {
               <>
                 <a
                   href="/myprofile"
-                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer hidden lg:flex"
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer hidden lg:flex dark:bg-blue-500 dark:text-white"
                 >
                   MyProfile
                 </a>
@@ -154,7 +154,7 @@ function Navbar() {
             ) : (
               <>
                 <a
-                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer dark:bg-blue-500 dark:text-white"
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
                   }

@@ -1,0 +1,99 @@
+[
+    {
+      "id": 1,
+      "title": "Pather Panchali",
+      "price": 0,
+      "category": "Free",
+      "genres": "Story",
+      "image": "https://m.media-amazon.com/images/I/91cGhkfab-L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Apur Kahini",
+      "price": 9,
+      "category": "Shelf+",
+      "genres": "Story",
+      "image": "https://cdn.exoticindia.com/images/products/original/books-2019-011/mzt307.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Dracula",
+      "price": 15,
+      "category": "Shelf+",
+      "genres": "Horror",
+      "image": "https://m.media-amazon.com/images/I/91wOUFZCE+L._UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Shining",
+      "price": 0,
+      "category": "Free",
+      "genres": "Horror",
+      "image": "https://m.media-amazon.com/images/I/91U7HNa2NQL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "A Calling for Charlie Barnes",
+      "price": 0,
+      "category": "Free",
+      "genres": "Comedy",
+      "image": "https://m.media-amazon.com/images/I/71h-cbZJI+L._UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Gopal Bhar",
+      "price": 10,
+      "category": "Shelf+",
+      "genres": "Comedy",
+      "image": "https://rukminim2.flixcart.com/image/850/1000/k0e66q80/regionalbooks/v/t/m/gopal-bhar-original-imafk7hcap6h2geg.jpeg?q=90&crop=false"
+    },
+    {
+      "id": 7,
+      "title": "Harry Potter Story",
+      "price": 20,
+      "category": "Shelf+",
+      "genres": "Adventure",
+      "image": "https://m.media-amazon.com/images/I/81q77Q39nEL.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Hobbit",
+      "price": 0,
+      "category": "Free",
+      "genres": "Adventure",
+      "image": "https://m.media-amazon.com/images/I/71V2v2GtAtL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Rich Dad Poor Dad",
+      "price": 25,
+      "category": "Shelf+",
+      "genres": "Psychology",
+      "image": "https://m.media-amazon.com/images/I/81BE7eeKzAL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Thinking, Fast and Slow",
+      "price": 0,
+      "category": "Free",
+      "genres": "Psychology",
+      "image": "https://m.media-amazon.com/images/I/71f6DceqZAL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Romeo and Juliet",
+      "price": 0,
+      "category": "Free",
+      "genres": "Romance",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660615231i/61990501.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Beauty and the Beast",
+      "price": 15,
+      "category": "Shelf+",
+      "genres": "Romance",
+      "image": "https://m.media-amazon.com/images/I/71psR3k1jrL._AC_UF1000,1000_QL80_.jpg"
+    }
+  ]
+  

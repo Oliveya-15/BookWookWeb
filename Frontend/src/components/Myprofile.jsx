@@ -1,35 +1,43 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const MyProfile = () => {
-  // Initialize userData with values from localStorage or default values
-  const [userData, setUserData] = useState(() => {
-    const savedData = localStorage.getItem("userData");
-    return savedData ? JSON.parse(savedData) : {
-      name: "",
-      image: "/profileimages/female.jpg", // Default image
-      email: "",
-      phone: "",
-      address: {
-        line1: "",
-        line2: "",
-      },
-      gender: "",
-      dob: "",
-    };
+  // Initialize userData with default values (no localStorage)
+  const [userData, setUserData] = useState({
+    name: "",
+    image: "/profileimages/female.jpg", // Default image
+    email: "",
+    phone: "",
+    address: {
+      line1: "",
+      line2: "",
+    },
+    gender: "",
+    dob: "",
   });
 
   const [isEdit, setIsEdit] = useState(true); // Start with edit mode
   const [showImageOptions, setShowImageOptions] = useState(false);
-
-  // Update localStorage whenever userData changes
-  useEffect(() => {
-    localStorage.setItem("userData", JSON.stringify(userData));
-  }, [userData]);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   const handleImageSelect = (imagePath) => {
     setUserData((prev) => ({ ...prev, image: imagePath }));
     setShowImageOptions(false);
+  };
+
+  // Handle saving the data and showing the "Thank You" message
+  const handleSave = () => {
+    setIsEdit(false); // Disable editing
+    setShowThankYou(true); // Show the "Thank You" message
+
+    // Reset the form after saving (optional)
+    setUserData((prev) => ({
+      ...prev,
+      name: "",
+      email: "",
+      phone: "",
+      gender: "",
+      dob: "",
+    }));
   };
 
   return (
@@ -89,7 +97,7 @@ const MyProfile = () => {
           />
         ) : (
           <p className="font-medium text-3xl text-neutral-800 dark:text-neutral-200 mt-4">
-            {userData.name || "Your Name"}
+            {showThankYou ? "Thank you for your information!" : userData.name || "Your Name"}
           </p>
         )}
 
@@ -111,7 +119,7 @@ const MyProfile = () => {
                 }
               />
             ) : (
-              <p className="text-blue-500">{userData.email || "Your Email"}</p>
+              <p className="text-blue-500">{showThankYou ? "Thank you for your information!" : userData.email || "Your Email"}</p>
             )}
             <p className="font-medium">Phone:</p>
             {isEdit ? (
@@ -125,7 +133,7 @@ const MyProfile = () => {
                 }
               />
             ) : (
-              <p className="text-blue-400">{userData.phone || "Your Phone"}</p>
+              <p className="text-blue-400">{showThankYou ? "Thank you for your information!" : userData.phone || "Your Phone"}</p>
             )}
           </div>
         </div>
@@ -151,9 +159,7 @@ const MyProfile = () => {
               <option value="Female">Female</option>
             </select>
           ) : (
-            <p className="text-gray-400">
-              {userData.gender || "Your Gender"}
-            </p>
+            <p className="text-gray-400">{showThankYou ? "Thank you for your information!" : userData.gender || "Your Gender"}</p>
           )}
           <p className="font-medium">Birthday:</p>
           {isEdit ? (
@@ -166,7 +172,7 @@ const MyProfile = () => {
               value={userData.dob}
             />
           ) : (
-            <p className="text-gray-400">{userData.dob || "Your Birthday"}</p>
+            <p className="text-gray-400">{showThankYou ? "Thank you for your information!" : userData.dob || "Your Birthday"}</p>
           )}
         </div>
       </div>
@@ -175,7 +181,7 @@ const MyProfile = () => {
       <div className="mt-10 flex gap-4 justify-center">
         <button
           className="border border-primary px-8 py-2 rounded hover:bg-primary hover:text-white transition-all"
-          onClick={() => setIsEdit((prev) => !prev)}
+          onClick={handleSave}
         >
           {isEdit ? "Save Information" : "Edit"}
         </button>
@@ -190,5 +196,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;  
-
+export default MyProfile;
