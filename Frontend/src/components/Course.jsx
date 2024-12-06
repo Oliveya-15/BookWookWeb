@@ -14,7 +14,7 @@ function Course() {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/book");
+        const response = await axios.get("https://bookwookweb-backend.onrender.com/book");
         const sortedBooks = response.data.sort((a, b) => {
           if (a.category === "Shelf+" && b.category !== "Shelf+") return -1;
           if (a.category !== "Shelf+" && b.category === "Shelf+") return 1;
