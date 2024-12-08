@@ -87,17 +87,17 @@ function Navbar() {
                 </svg>
               </div>
               <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 dark:bg-slate-700 dark:text-white rounded-box w-52"
+                >
                 {navItems}
-                {/* Conditionally rendering MyProfile in Sidebar for small screens */}
                 {authUser && (
                   <li>
-                    <a href="/myprofile">MyProfile</a>
-                  </li>
-                )}
-              </ul>
+                <a href="/myprofile">MyProfile</a>
+                </li>
+                  )}
+                </ul>
+
             </div>
             <h1 className="text-3xl text-black dark:text-white" style={{ fontFamily: 'Pacifico, cursive' }}>
               BookWook
